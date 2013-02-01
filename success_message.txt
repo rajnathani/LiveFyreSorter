@@ -1,0 +1,1 @@
+<div style="margin-bottom: 20px;clear:both;padding:10px;border:1px solid rgb(10,180,90); background-color:rgb(50,234,140); text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);text-align:center; color:white; font-weight: bold;font-style:italic;">The comments have been sorted by your LiveFyre Sorter Extension</div>

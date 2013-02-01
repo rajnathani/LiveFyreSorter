@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+  <link href='http://fonts.googleapis.com/css?family=Croissant+One' rel='stylesheet' type='text/css'>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+	
+		*{
+			margin:0;
+			letter-spacing:1px;
+			font-family:'Croissant One';
+		}
+	
+      body {
+	  padding:9px 0;
+        min-width: 247px;
+		background-image:-webkit-linear-gradient(top, rgb(250,100,80) 0, rgb(205,40,50) 100%);
+		text-align:center;
+        overflow-x: hidden;
+		-webkit-transition:500ms all;
+      }
+	  
+	  button{
+	  margin:6px 0;
+	  padding:4px 0;
+	  cursor:pointer;
+	  font-size:15px;
+	  border:1px solid grey;
+	  border-radius:3px;
+	  box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	  background-image:-webkit-linear-gradient(top, white 0, gainsboro 100%);
+	  text-align:center;
+	width:200px;
+	  		-webkit-transition:85ms all;
+	  }
+	  
+	  button:hover{
+	  box-shadow:0 3px 3px rgba(0,0,0,0.5);
+	  background-image:-webkit-linear-gradient(top, white 0, rgb(245,245,245); 100%);
+	  -webkit-transform:scale(1.1,1.1);
+	  }
+	  
+	  button:active{
+	  box-shadow:none;
+	  color:red;
+	  font-weight:bold;
+	  background-image:-webkit-linear-gradient(top, gainsboro 0, rgb(195,195,195); 100%);
+	  -webkit-transform:scale(1,1);
+	  }
+
+h3{font-size:20px;}	  
+h3,
+    
+	footer{color:white;
+	text-shadow:1px 1px 3px rgba(0,0,0,0.5);}
+	</style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+	 
+	 <h3>LiveFyre Sorter</h3>
+	 <button id="what">SORT</button>
+	 <div id="availability"></div>
+	 <!--footer>
+	  &lt Relfor &gt
+	 </footer -->
+	<script src="myscript.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
+
