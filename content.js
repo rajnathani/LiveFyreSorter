@@ -4,6 +4,39 @@ var styl=document.createElement("style");
 styl.innerHTML = "@-webkit-keyframes in-pop /* Safari and Chrome */  { \
 from {-webkit-transform:scale(0.7,0.7) translate(-100px,0); opacity:0.3} \
 to {-webkit-transform:scale(1,1) translate(0,0); opacity:1} } \
+\
+#livefyre-extension-success-message { \
+	position:relative; \
+ padding :9px 22px; \
+clear :both; \
+margin-bottom :15px; \
+background-color :rgb(55,240,140); \
+  border :2px dashed rgb(20,200,80); \
+text-align :center; \
+font-size:14px; \
+color :white; \
+font-weight : bold; \
+text-shadow :1px 1px 5px rgba(0,0,0,0.2); \
+-webkit-animation: in-pop 400ms; \
+} \
+\
+#livefyre-extension-cancel-success-message { \
+	position:absolute; \
+	cursor:pointer; \
+	top:1px; \
+	right:2px; \
+	width:14px; \
+	border:2px solid rgba(240,240,240,0.95); \
+	border-radius:1em; \
+	line-height:14px; \
+	text-align:center; \
+	color:rgba(245,245,245,0.95); \
+	font-size:14px; \
+} \
+\
+#livefyre-extension-cancel-success-message:hover { \
+color:rgba(255,255,255,0.95); \
+} \
 "
 document.body.appendChild(styl);
 
@@ -39,19 +72,14 @@ $(fyre_stream_content).empty(); \
 if (document.getElementById('livefyre-extension-success-message') == undefined){ \
 var success = document.createElement('div'); \
  success.id = 'livefyre-extension-success-message'; \
- $(success).css('-webkit-animation', 'in-pop 400ms');\
- success.style.padding = '10px'; \
- success.style.clear = 'both'; \
-  success.style.marginBottom = '15px'; \
- success.style.backgroundColor = 'rgb(55,240,140)'; \
-  success.style.border = '1px solid rgb(20,200,50)'; \
- success.style.textAlign = 'center'; \
- success.style.color = 'white'; \
- success.style.fontWeight = 'bold'; \
- success.style.textShadow = '1px 1px 5px rgba(0,0,0,0.2)'; \
- var cancel_success_msg = document.createElement(''); \
-success.innerHTML = 'The comments have been sorted by your LiveFyre Sorter Extension'; \
-$(success).insertAfter('.fyre-stream-sort'); } \
+ var cancel_success_msg = document.createElement('div'); \
+ cancel_success_msg.id = 'livefyre-extension-cancel-success-message'; \
+ cancel_success_msg.innerHTML = 'x'; \
+ $(cancel_success_msg).bind('click', function(){  $(this.parentNode).remove();  }); \
+success.innerHTML = 'The comments below have been sorted on the basis of likes by your LiveFyre Sorter Extension'; \
+success.appendChild(cancel_success_msg); \
+$(success).insertAfter('.fyre-stream-sort'); \
+ } \
 ";
 
 
