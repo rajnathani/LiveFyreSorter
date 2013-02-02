@@ -68,19 +68,18 @@ $(fyre_stream_content).empty(); \
              fyre_stream_content.appendChild(sorted_comment_likes[i][0]); i++;  \
           }, 10); \
 } \
-if (document.getElementById('livefyre-extension-success-message') == undefined){ \
-var success = document.createElement('div'); \
- success.id = 'livefyre-extension-success-message'; \
- var cancel_success_msg = document.createElement('div'); \
- cancel_success_msg.id = 'livefyre-extension-cancel-success-message'; \
- cancel_success_msg.innerHTML = 'x'; \
- $(cancel_success_msg).bind('click', function(){  $(this.parentNode).remove();  }); \
-success.innerHTML = 'The comments below have been sorted on the basis of likes by your LiveFyre Sorter Extension'; \
-success.appendChild(cancel_success_msg); \
-$(success).insertAfter('.fyre-stream-sort'); \
+if ((document.getElementById('livefyre-extension-success-message') == undefined)  && (sorted_comment_likes.length != 0)){ \
+	var success = document.createElement('div'); \
+	 success.id = 'livefyre-extension-success-message'; \
+	 var cancel_success_msg = document.createElement('div'); \
+	 cancel_success_msg.id = 'livefyre-extension-cancel-success-message'; \
+	 cancel_success_msg.innerHTML = 'x'; \
+	 $(cancel_success_msg).bind('click', function(){  $(this.parentNode).remove();  }); \
+	success.innerHTML = 'The comments below have been sorted on the basis of likes by your LiveFyre Sorter Extension'; \
+	success.appendChild(cancel_success_msg); \
+	$(success).insertAfter('.fyre-stream-sort'); \
  } \
 ";
 
 
 document.body.appendChild(sc);
-document.body.appendChild(document.createElement("button"));

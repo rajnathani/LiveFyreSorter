@@ -2,12 +2,15 @@
   "manifest_version": 2,
 
   "name": "LiveFyre Comment Sorter!",
-  "description": "This extension enables sorting of comments on websites on the basis of upvotes, where the comment system of the website is powered by LiveFyre.",
-  "version": "1.0",
+  "description": "This enables sorting of comments on websites ( with LiveFyre Comment System ) on the basis of number of likes..",
+  "version": "1.3",
   	
 "permissions": [
   "tabs", "http://*/*"
 ],
+"icons": { "19": "small_icon19.png",
+           "48": "medium_icon48.png",
+          "128": "large_icon128.png" },
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
