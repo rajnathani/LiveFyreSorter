@@ -1,5 +1,4 @@
 
-
 var styl=document.createElement("style");
 styl.innerHTML = "@-webkit-keyframes in-pop /* Safari and Chrome */  { \
 from {-webkit-transform:scale(0.7,0.7) translate(-100px,0); opacity:0.3} \
